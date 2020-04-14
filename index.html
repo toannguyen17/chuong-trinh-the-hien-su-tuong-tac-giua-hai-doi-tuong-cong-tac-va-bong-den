@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>[Bài tập] Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn</title>
+</head>
+<body>
+	<div class="regBox">
+		<p>[Bài tập] Phát triển chương trình thể hiện sự tương tác giữa hai đối tượng: công tắc và bóng đèn</p>
+		<img id="light" src="off.jpg" width="150">
+		<div class="switch">
+			<label>
+				OFF
+				<input id="lightStatus" type="checkbox" name="lightStatus" />
+				<span class="lever"></span>
+				ON
+			</label>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="SwitchButton.js"></script>
+	<script type="text/javascript" src="ElectricLamp.js"></script>
+	<script type="text/javascript">
+		let light = new ElectricLamp('light', 'on.jpg', 'off.jpg');
+		new SwitchButton(light, 'lightStatus');
+	</script>
+</body>
+</html>
